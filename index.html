@@ -51,7 +51,30 @@ footer{text-align:center;color:#617969;font-size:11px;padding:26px 0}
 <div class="barset"><div class="bar" style="height:42%"></div><div class="bar alt" style="height:21%"></div></div><div class="barset"><div class="bar" style="height:61%"></div><div class="bar alt" style="height:29%"></div></div><div class="barset"><div class="bar" style="height:48%"></div><div class="bar alt" style="height:19%"></div></div><div class="barset"><div class="bar" style="height:78%"></div><div class="bar alt" style="height:34%"></div></div><div class="barset"><div class="bar" style="height:57%"></div><div class="bar alt" style="height:27%"></div></div><div class="barset"><div class="bar" style="height:92%"></div><div class="bar alt" style="height:39%"></div></div><div class="barset"><div class="bar" style="height:72%"></div><div class="bar alt" style="height:31%"></div></div></div><div class="chart-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></section>
 <section class="panel"><div class="panel-title"><h2>Payment overview</h2><small>Recorded payments</small></div><div class="donut-wrap"><div class="donut"><div class="donut-center"><b>100%</b><small>Sample</small></div></div><div class="keylist"><div class="key"><span><i class="dot"></i>Cash</span><strong>52%</strong></div><div class="key"><span><i class="dot" style="background:#b5f26a"></i>Credit</span><strong>24%</strong></div><div class="key"><span><i class="dot alt"></i>Other</span><strong>24%</strong></div></div></div></section>
 </div>
-<div class="panel" style="margin-top:15px"><div class="panel-title"><h2>Quick actions</h2><small>Common tasks</small></div><div class="quick"><button class="action"><span>＋</span>New invoice</button><button class="action"><span>♙</span>Add customer</button><button class="action"><span>▦</span>Add item</button><button class="action"><span>↘</span>Record expense</button></div></div>
+<div class="panel" style="margin-top:15px"><div class="panel-title"><h2>Quick actions</h2><small>Common tasks</small></div><div class="quick"><button class="action"><span>＋</span>New invoice</button><button class="action"><div class="panel" style="margin-top:15px">
+  <div class="panel-title">
+    <h2>Quick actions</h2>
+    <small>Common tasks</small>
+  </div>
+
+  <div class="quick">
+    <button class="action" onclick="quickAction('invoice')">
+      <span>＋</span>New invoice
+    </button>
+
+    <button class="action" onclick="quickAction('customer')">
+      <span>♙</span>Add customer
+    </button>
+
+    <button class="action" onclick="quickAction('item')">
+      <span>▦</span>Add item
+    </button>
+
+    <button class="action" onclick="quickAction('expense')">
+      <span>↘</span>Record expense
+    </button>
+  </div>
+</div>
 <section class="panel"><div class="panel-title"><h2>Recent invoices</h2><small>Latest activity</small></div><div class="table-wrap"><table><thead><tr><th>INVOICE</th><th>CUSTOMER</th><th>DATE</th><th>AMOUNT</th><th>STATUS</th></tr></thead><tbody><tr><td>NS-00128</td><td>Arshad</td><td>Today</td><td>Rs. 10,400</td><td><span class="status">Paid</span></td></tr><tr><td>NS-00127</td><td>Ali Raza</td><td>Yesterday</td><td>Rs. 4,700</td><td><span class="status pending">Pending</span></td></tr><tr><td>NS-00126</td><td>Imran</td><td>20 Nov</td><td>Rs. 7,250</td><td><span class="status">Paid</span></td></tr></tbody></table></div></section>
 <section class="panel"><div class="panel-title"><h2>Stock reminders</h2><small>Example alerts</small></div><div class="alert"><div class="alert-icon">!</div><div><b>Low stock · Item A</b><small>Consider reviewing inventory</small></div><div class="qty">4 left</div></div><div class="alert"><div class="alert-icon">!</div><div><b>Low stock · Item B</b><small>Stock level is low</small></div><div class="qty">2 left</div></div><div class="alert"><div class="alert-icon" style="background:#153a27;color:#9fe4ad">✓</div><div><b>Inventory status</b><small>Sample status summary</small></div></div></section>
 </div>
@@ -59,4 +82,65 @@ footer{text-align:center;color:#617969;font-size:11px;padding:26px 0}
 </main>
 </div>
 <div class="mobilebar"><button class="active">◈<br>Home</button><button>▦<br>Stock</button><button>▤<br>Invoices</button><button>♙<br>Customers</button><button>⚙<br>More</button></div>
+  <script>
+function quickAction(type) {
+
+  if (type === 'invoice') {
+    const customer = prompt("Enter customer name:");
+    if (!customer) return;
+
+    const amount = prompt("Enter invoice amount (Rs.):");
+    if (!amount) return;
+
+    alert(
+      "Invoice preview created!\n\nCustomer: " +
+      customer +
+      "\nAmount: Rs. " +
+      amount
+    );
+  }
+
+  else if (type === 'customer') {
+    const name = prompt("Enter customer name:");
+    if (!name) return;
+
+    const phone = prompt("Enter phone number:");
+
+    alert(
+      "Customer preview added!\n\nName: " +
+      name +
+      "\nPhone: " +
+      (phone || "Not provided")
+    );
+  }
+
+  else if (type === 'item') {
+    const name = prompt("Enter item name:");
+    if (!name) return;
+
+    const price = prompt("Enter item price (Rs.):");
+
+    alert(
+      "Item preview added!\n\nItem: " +
+      name +
+      "\nPrice: Rs. " +
+      (price || "Not provided")
+    );
+  }
+
+  else if (type === 'expense') {
+    const description = prompt("Expense description:");
+    if (!description) return;
+
+    const amount = prompt("Expense amount (Rs.):");
+
+    alert(
+      "Expense preview recorded!\n\nDescription: " +
+      description +
+      "\nAmount: Rs. " +
+      (amount || "Not provided")
+    );
+  }
+}
+</script>
 </body></html>
