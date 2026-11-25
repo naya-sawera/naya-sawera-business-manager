@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b0f0e">
-<title>Naya Sawera Halla | Cloud Business Manager V4.4</title>
+<title>Naya Sawera Halla | Cloud Business Manager V4.5</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
@@ -22,7 +22,7 @@ header{position:sticky;top:0;background:#0b0f0eef;backdrop-filter:blur(12px);z-i
 @media(min-width:761px){.invoice-cards{display:none!important}.invoice-table-desktop{display:block!important}}
 @media print{body{background:#fff!important;color:#000!important}body *{visibility:hidden!important}#modalRoot,.modal,.modalbox,.invoice-paper,.invoice-paper *{visibility:visible!important}.modal{position:static!important;inset:auto!important;background:transparent!important;padding:0!important;display:block!important}.modalbox{width:100%!important;max-width:none!important;max-height:none!important;overflow:visible!important;background:#fff!important;border:0!important;border-radius:0!important;padding:0!important}.modalbox>.row,.invoice-actions,.modalbox .secondary{display:none!important}.invoice-paper{display:block!important;position:absolute!important;left:0!important;top:0!important;width:100%!important;max-width:none!important;padding:10mm!important;margin:0!important;border-radius:0!important}.invoice-paper h1{font-size:22pt}.invoice-paper table{page-break-inside:avoid}.invoice-paper tr{page-break-inside:avoid}@page{size:auto;margin:12mm}}
 
-/* V4.4 premium responsive layer */
+/* V4.5 premium responsive layer */
 :root{--bg:#07110d;--panel:#101d17;--panel2:#17271f;--line:#294237;--green:#13a66b;--lime:#b7f45b;--text:#f4f8f5;--muted:#9cafa4}
 body{background:radial-gradient(ellipse at 12% -12%,rgba(21,145,88,.23),transparent 38%),radial-gradient(ellipse at 96% 12%,rgba(157,216,63,.10),transparent 28%),var(--bg)}
 header{padding:14px clamp(12px,3vw,28px);background:rgba(7,17,13,.88);backdrop-filter:blur(18px);box-shadow:0 10px 30px #0003}
@@ -50,15 +50,38 @@ input,select{border-radius:12px;background:#0c1711;border-color:#294237;padding:
 @media(max-width:760px){.grid{gap:10px}.card{padding:14px;border-radius:17px}.nav{display:flex;overflow:auto;scrollbar-width:none;margin:14px 0 18px}.nav::-webkit-scrollbar{display:none}.nav button{padding:9px 12px;font-size:12px}.mobilebar{display:flex}.wrap{padding-bottom:108px}.invoice-actions{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:430px){.brand b{font-size:12px}.brand small{font-size:9px}header{align-items:flex-start}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{font-size:21px}.mobilebar button{min-width:44px}}
 
+
+/* V4.5 premium depth, clarity and responsive refinements */
+:root{--bg:#07100c;--panel:#101c16;--panel2:#14251b;--line:#284536;--green:#16b879;--lime:#b7f45b;--text:#f5faf6;--muted:#a1b3a7}
+body{background:radial-gradient(ellipse at 12% -10%,#174b2b55,transparent 42%),radial-gradient(ellipse at 100% 30%,#0d402b25,transparent 38%),var(--bg);letter-spacing:.01em}
+header{background:linear-gradient(180deg,#07100cf5,#09130ff0);box-shadow:0 12px 34px #0005}
+.logo{box-shadow:0 0 0 1px #b7f45b44,0 8px 22px #16b87935;transform:translateZ(0)}
+.card{background:linear-gradient(145deg,#14231b,#0f1914);box-shadow:0 12px 28px #0003,inset 0 1px 0 #ffffff07;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-2px);border-color:#3b6b4d;box-shadow:0 18px 36px #0004,inset 0 1px 0 #ffffff09}
+button{background:linear-gradient(135deg,#18b879,#0c9860);box-shadow:0 5px 14px #07965b25;transition:transform .15s ease,filter .15s ease,box-shadow .15s ease}
+button:hover{filter:brightness(1.08);transform:translateY(-1px);box-shadow:0 8px 20px #07965b33}
+button:active{transform:translateY(1px) scale(.985)}button.secondary{background:linear-gradient(135deg,#263a2f,#1b2c23);box-shadow:none}
+.nav{padding:5px;border:1px solid #254635;background:#0b1711;border-radius:16px;scrollbar-width:thin}
+.nav button{border-radius:12px;border-color:transparent;background:transparent}
+.nav button.active{background:linear-gradient(135deg,#17472e,#123523);box-shadow:inset 0 1px 0 #ffffff12,0 5px 16px #0003}
+.metric{letter-spacing:-.04em;text-shadow:0 2px 12px #0003}
+.pill{border:1px solid #477b4d55;background:#183626;color:#b7f45b}
+input,select{background:#0a140e;border-color:#2b4937}input:focus,select:focus{box-shadow:0 0 0 3px #16b87920}
+.tablewrap,.invoice-paper{box-shadow:0 10px 24px #0002}
+.mobilebar{background:#09130ff2;backdrop-filter:blur(18px);border:1px solid #315640;border-radius:22px 22px 0 0;box-shadow:0 -12px 36px #0005;padding:8px 3px calc(8px + env(safe-area-inset-bottom));overflow-x:auto}
+.mobilebar button{min-width:58px;border-radius:12px;white-space:nowrap}.mobilebar button.active{background:#163b28;color:var(--lime)}
+@media(max-width:760px){header{padding:11px 12px}.brand b{font-size:13px}.brand small{font-size:9px}.wrap{padding-top:14px}.grid{gap:9px}.card{padding:13px;border-radius:17px}.metric{font-size:clamp(19px,5vw,24px)}.actions button{flex:1 1 auto}.nav{margin:12px 0}.mobilebar{gap:0}.mobilebar button{font-size:10px;padding:8px 2px}.section{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
-<header><div class="brand"><div class="logo">🌱</div><div><b>NAYA SAWERA HALLA</b><small>CLOUD BUSINESS MANAGER · V4.4</small></div></div><div class="actions" style="margin:0"><span class="status" id="cloudStatus">Not connected</span><button class="secondary small hidden" id="signOutBtn">Sign out</button></div></header>
+<header><div class="brand"><div class="logo">🌱</div><div><b>NAYA SAWERA HALLA</b><small>CLOUD BUSINESS MANAGER · V4.5</small></div></div><div class="actions" style="margin:0"><span class="status" id="cloudStatus">Not connected</span><button class="secondary small hidden" id="syncBtn" onclick="syncNow()">↻ Sync</button><button class="secondary small hidden" id="signOutBtn">Sign out</button></div></header>
 <main class="wrap">
 <section id="setup" class="auth hidden"><div class="card"><div class="eyebrow">FIRST-TIME SETUP</div><h1>Connect cloud database</h1><p class="sub">Use your Supabase Project URL and anon/public key only. Never paste a service-role secret.</p><div class="field"><label>Supabase Project URL</label><input id="projectUrl" placeholder="https://your-project.supabase.co"></div><div class="field"><label>Supabase anon/public key</label><input id="anonKey" placeholder="sb_publishable_... or legacy anon key"></div><button onclick="connectSupabase()">Connect</button><p class="muted" id="setupMsg"></p></div></section>
 <section id="auth" class="auth hidden"><div class="card"><div class="eyebrow">SECURE CLOUD LOGIN</div><h1>Welcome back</h1><p class="sub">Sign in to access shop records.</p><div class="field"><label>Email</label><input id="email" type="email" autocomplete="username"></div><div class="field"><label>Password</label><input id="password" type="password" autocomplete="current-password"></div><div class="actions"><button onclick="signIn()">Sign in</button><button class="secondary" onclick="signUp()">Create account</button></div><p class="muted" id="authMsg"></p></div></section>
 <section id="app" class="hidden"><div class="eyebrow">BUSINESS WORKSPACE</div><h1 id="pageTitle">Overview</h1><p class="sub">Cloud-synced business records · PKR</p><nav class="nav" id="nav"></nav><section id="view"></section></section>
-<div class="footer">Naya Sawera Halla · V4.4 Cloud Edition · General bookkeeping and non-hazardous goods only</div></main><div class="mobilebar hidden" id="mobilebar"></div><div id="modalRoot"></div>
+<div class="footer">Naya Sawera Halla · V4.5 Cloud Edition · General bookkeeping and non-hazardous goods only</div></main><div class="mobilebar hidden" id="mobilebar"></div><div id="modalRoot"></div>
 <script>
 const CONFIG_KEY='nsh_supabase_config_v2';let sb=null,user=null,page='home',data={products:[],customers:[],invoices:[],expenses:[]};
 const $=id=>document.getElementById(id),money=n=>'Rs. '+Number(n||0).toLocaleString('en-PK'),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -66,7 +89,8 @@ const titles={home:'Overview',products:'Inventory',customers:'Customers',invoice
 function setStatus(s){$('cloudStatus').textContent=s}function show(id){$(id).classList.remove('hidden')}function hide(id){$(id).classList.add('hidden')}
 function init(){let c=localStorage.getItem(CONFIG_KEY);if(!c){show('setup');return}try{let x=JSON.parse(c);sb=window.supabase.createClient(x.url,x.key);setStatus('Connecting…');sb.auth.onAuthStateChange(async(_e,session)=>{user=session?.user||null;await route()});sb.auth.getSession().then(async({data:{session}})=>{user=session?.user||null;await route()})}catch(e){show('setup');setStatus('Configuration error')}}
 async function connectSupabase(){let url=$('projectUrl').value.trim(),key=$('anonKey').value.trim();if(!/^https:\/\/.+\.supabase\.co$/.test(url)||!key){$('setupMsg').textContent='Enter a valid Supabase URL and public key.';return}localStorage.setItem(CONFIG_KEY,JSON.stringify({url,key}));location.reload()}
-async function route(){hide('setup');if(!sb){show('setup');return}if(!user){hide('app');show('auth');hide('mobilebar');hide('signOutBtn');setStatus('Signed out');return}hide('auth');show('app');show('signOutBtn');setStatus('Cloud connected');await refresh();render()}
+async function syncNow(){const b=$('syncBtn');if(b){b.disabled=true;b.textContent='↻ Syncing…'}setStatus('Syncing cloud data…');try{await refresh();render();setStatus('Cloud synced · '+new Date().toLocaleTimeString())}finally{if(b){b.disabled=false;b.textContent='↻ Sync'}}}
+async function route(){hide('setup');if(!sb){show('setup');return}if(!user){hide('app');show('auth');hide('mobilebar');hide('signOutBtn');hide('syncBtn');setStatus('Signed out');return}hide('auth');show('app');show('signOutBtn');show('syncBtn');setStatus('Cloud connected');await refresh();render()}
 async function signIn(){let{error}=await sb.auth.signInWithPassword({email:$('email').value,password:$('password').value});$('authMsg').textContent=error?.message||'Signed in.'}
 async function signUp(){let{error}=await sb.auth.signUp({email:$('email').value,password:$('password').value});$('authMsg').textContent=error?.message||'Account created. Check email if confirmation is enabled.'}
 $('signOutBtn').onclick=async()=>{await sb.auth.signOut()}
@@ -97,7 +121,7 @@ function dashboardView(sales,expenses){
  <div class="notice section">General bookkeeping and non-hazardous goods such as seeds, tools and ordinary shop supplies only.</div>`;
 }
 
-function reportsView(){return `<div class="card"><h2>Report period</h2><div class="report-filters"><div class="field"><label>From date</label><input id="reportFrom" type="date" onchange="updateReports()"></div><div class="field"><label>To date</label><input id="reportTo" type="date" onchange="updateReports()"></div></div><div class="actions"><button class="secondary" onclick="clearReportDates()">Show all dates</button><button onclick="downloadReportCSV()">Export CSV</button><button class="secondary" onclick="printReport()">Print report</button></div></div><div id="reportResults" class="section">${reportContent()}</div><div class="card section"><div class="actions"><button class="secondary" onclick="downloadCloudBackup()">Download cloud backup (JSON)</button><button class="secondary" onclick="restoreCloudBackup()">Restore backup JSON</button></div><p class="muted">Reports summarize your saved records; not audited statements.</p></div>`}
+function reportsView(){return `<div class="card"><h2>Report period</h2><div class="report-filters"><div class="field"><label>From date</label><input id="reportFrom" type="date" onchange="updateReports()"></div><div class="field"><label>To date</label><input id="reportTo" type="date" onchange="updateReports()"></div></div><div class="actions"><button class="secondary" onclick="clearReportDates()">Show all dates</button><button onclick="downloadReportCSV()">Export CSV</button><button class="secondary" onclick="printReport()">Print report</button></div></div><div id="reportResults" class="section">${reportContent()}</div><div class="card section"><div class="actions"><button class="secondary" onclick="downloadCloudBackup()">Download cloud backup (JSON)</button><button class="secondary" onclick="restoreCloudBackup()">Restore backup JSON</button></div><p class="muted">Cloud sync keeps the same account records available on signed-in devices. Keep a periodic JSON backup too. Reports are summaries, not audited statements.</p></div>`}
 function reportFiltered(){let from=$('reportFrom')?.value||'',to=$('reportTo')?.value||'',invoices=data.invoices.filter(x=>(!from||String(x.invoice_date||'')>=from)&&(!to||String(x.invoice_date||'')<=to)),expenses=data.expenses.filter(x=>(!from||String(x.expense_date||'')>=from)&&(!to||String(x.expense_date||'')<=to));return{invoices,expenses,sales:invoices.reduce((s,x)=>s+Number(x.total||0),0),expenseTotal:expenses.reduce((s,x)=>s+Number(x.amount||0),0)}}
 function reportContent(){let r=reportFiltered();return `<div class="grid"><div class="card"><div class="label">SALES</div><div class="metric">${money(r.sales)}</div></div><div class="card"><div class="label">EXPENSES</div><div class="metric">${money(r.expenseTotal)}</div></div><div class="card"><div class="label">NET DIFFERENCE</div><div class="metric">${money(r.sales-r.expenseTotal)}</div></div><div class="card"><div class="label">INVOICES</div><div class="metric">${r.invoices.length}</div></div></div><div class="card section"><h2>Sales invoices</h2>${invoiceTable(r.invoices)}</div><div class="card section tablewrap"><h2>Expenses</h2>${expenseTableFor(r.expenses)}</div>`}
 function updateReports(){if($('reportResults'))$('reportResults').innerHTML=reportContent()}function clearReportDates(){if($('reportFrom'))$('reportFrom').value='';if($('reportTo'))$('reportTo').value='';updateReports()}
@@ -125,7 +149,7 @@ async function saveInvoice(e){e.preventDefault();let f=new FormData(e.target),q=
 function expenseForm(){modal('Add expense',`<form onsubmit="saveExpense(event)"><div class="field"><label>Date</label><input name="expense_date" type="date" value="${new Date().toISOString().slice(0,10)}" required></div><div class="field"><label>Category</label><select name="category"><option>Rent</option><option>Utilities</option><option>Transport</option><option>Staff</option><option>Other</option></select></div><div class="field"><label>Note</label><input name="note"></div><div class="field"><label>Amount (PKR)</label><input name="amount" type="number" min="1" required></div><button>Save expense</button></form>`)}
 async function saveExpense(e){e.preventDefault();let f=new FormData(e.target);try{await run(sb.from('expenses').insert({expense_date:f.get('expense_date'),category:f.get('category'),note:f.get('note'),amount:+f.get('amount')}));closeModal();await refresh();render()}catch(x){alert(x.message)}}
 async function removeRow(table,id){if(!confirm('Delete this record?'))return;try{await run(sb.from(table).delete().eq('id',id));await refresh();render()}catch(e){alert(e.message)}}
-async function downloadCloudBackup(){try{await refresh();let backup={app:'Naya Sawera Halla V4.4 Cloud Edition',created_at:new Date().toISOString(),tables:data},blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='naya-sawera-cloud-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href)}catch(e){alert('Backup failed: '+e.message)}}
+async function downloadCloudBackup(){try{await refresh();let backup={app:'Naya Sawera Halla V4.5 Cloud Edition',created_at:new Date().toISOString(),tables:data},blob=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='naya-sawera-cloud-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href)}catch(e){alert('Backup failed: '+e.message)}}
 async function restoreCloudBackup(){let pick=document.createElement('input');pick.type='file';pick.accept='.json,application/json';pick.onchange=async()=>{let file=pick.files?.[0];if(!file)return;if(!confirm('Add backup records to cloud? Existing records will not be deleted.'))return;try{let b=JSON.parse(await file.text());if(!b.tables)throw new Error('Backup format not recognized.');for(let table of ['products','customers','invoices','expenses'])for(let row of(b.tables[table]||[])){let copy={...row};delete copy.id;delete copy.owner_id;delete copy.created_at;let{error}=await sb.from(table).insert(copy);if(error)throw error}await refresh();render();alert('Backup records restored (added).')}catch(e){alert('Restore failed: '+e.message)}};pick.click()}
 init();
 </script></body></html>
