@@ -1,0 +1,14 @@
+{
+  "name": "Naya Sawera Halla Business Manager",
+  "short_name": "Naya Sawera",
+  "description": "Cloud business manager for Naya Sawera Halla",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#06100b",
+  "theme_color": "#07110d",
+  "icons": [
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
