@@ -1,0 +1,25 @@
+{
+  "name": "Naya Sawera Halla Business Manager",
+  "short_name": "Naya Sawera",
+  "description": "V5.5 Ultimate Business Suite · Cloud business manager for Naya Sawera Halla",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#07100b",
+  "theme_color": "#07100b",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
